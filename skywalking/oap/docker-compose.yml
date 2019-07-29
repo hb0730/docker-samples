@@ -1,0 +1,12 @@
+version: '3.3'
+services:
+   skywaling-oap:
+       image: apache/skywalking-oap-server:6.2.0
+       container_name: skywalking-oap
+       ports:
+          - 11800:11800
+          - 12800:12800
+       environment:
+          - SW_STORAGE=elasticsearch 
+          - SW_STORAGE_ES_CLUSTER_NODES=39.104.49.219:9200
+          - TZ=Asia/Shanghai

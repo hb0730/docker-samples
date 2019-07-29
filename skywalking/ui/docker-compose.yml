@@ -1,0 +1,9 @@
+version: '3.3'
+services:
+   skywalking-ui:
+        image: wutang/skywalking-ui:6.1.0
+        container_name: skywalking-ui
+        ports:
+           - 8600:8080
+        environment:
+           collector.ribbon.listOfServers: 47.99.95.19:12800

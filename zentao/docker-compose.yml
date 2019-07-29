@@ -1,0 +1,20 @@
+version: "2.2"
+services: 
+  zentao:
+     image: idoop/zentao:latest
+     container_name: zentao
+    # if web response code: 310 ERR_TOO_MANY_REDIRECTS, please use host mode.
+    #network_mode: "host"
+     ports:
+       - "8120:80"
+       - "3309:3306"
+    # mysql root account default password is '123456'.
+    # the zentao adminstrator account is 'admin',and init password is '123456'.
+     environment:
+    # specifies Adminer account and password for web login database.
+       USER: "root"
+       PASSWD: "123456"
+       BIND_ADDRESS: "false"
+     volumes:
+       - ./data:/opt/zbox/
+     restart: always
