@@ -1,0 +1,21 @@
+version: "3.1"
+services:
+  jenkins:
+     image: jenkins
+     volumes:
+       - ./jenkins_home:/var/jenkins_home
+       - /var/run/docker.sock:/var/run/docker.sock
+     ports:
+       - '8089:8080'
+       - '50000:50000'
+     restart: always
+     container_name: jenkins
+     environment:
+        JAVA_OPTS: '-Djava.util.logging.config.file=/var/jenkins_home/log.properties'
+        JAVA_OPTS: '-Duser.timezone=Asia/Shanghai'
+     networks:
+        jenkins:
+           aliases:
+             - jenkins_networks
+networks:
+   jenkins:
