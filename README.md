@@ -23,4 +23,4 @@ Common docker-compose
 [jenkins](https://github.com/hb0730/docker/tree/master/jenkins)
 
 # spring-boot-demo
-[spring-boot-demo](https://github.com/hb0730/docker/tree/masterspring-boot-demo)
+[spring-boot-demo](https://github.com/hb0730/docker/tree/master/spring-boot-demo)
