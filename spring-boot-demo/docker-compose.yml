@@ -1,0 +1,12 @@
+version: '3.1'
+services:
+  hohofast:
+    restart: always
+    image: xxxx
+    environment:
+      - SPRING_PROFILES_ACTIVE=dev
+    volumes:
+      - ./log:/logHome/log
+      - ./excel:/logHome/excel
+    ports:
+      - 8080:8080
