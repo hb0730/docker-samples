@@ -1,0 +1,11 @@
+version: '3.3'
+services:
+   elasticsearch:
+        image: wutang/elasticsearch-shanghai-zone:6.3.2
+        container_name: elasticsearch
+        restart: always
+        ports:
+           - 9200:9200
+           - 9300:9300
+        environment:
+           cluster.name: elasticsearch
