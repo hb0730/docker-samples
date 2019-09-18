@@ -1,11 +1,25 @@
-version: '3.3'
+version: '3.1'
 services:
-   elasticsearch:
-        image: wutang/elasticsearch-shanghai-zone:6.3.2
+    elasticsearch:
+        image: elasticsearch:6.7.0 
         container_name: elasticsearch
-        restart: always
-        ports:
-           - 9200:9200
-           - 9300:9300
         environment:
-           cluster.name: elasticsearch
+             - bootstrap.memory_lock=true
+             - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+             - node.name=elasticsearch_node_1
+        ulimits:
+             memlock:
+                soft: -1
+                hard: -1
+        volumes:
+            - ./data/data:/usr/share/elasticsearch/data
+            - ./data/logs:/usr/share/elasticsearch/logs
+            - ./devops/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+        ports:
+            - 9200:9200
+            - 9300:9300
+        networks:
+            - es-net
+networks:
+  es-net:
+     external: true
