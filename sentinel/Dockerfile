@@ -2,25 +2,31 @@ FROM openjdk:8-jre
 
 MAINTAINER bing_huang <1278032416@qq.com>
 
-ENV FILE_NAME=sentinel-dashboard \
-	VERSION=1.6.2 \
-    PORT=8080 
+USER root
 
-#alibaba sentinel dashboard
-RUN mkdir /usr/local/sentinel
+ENV BASE_DIR=home/sentinel \
+    FILE_NAME=sentinel-dashboard \
+    VERSION=1.6.3 \
+    PROJECT_NAME=sentinel-dashboard
+#RUN mkdir /home/sentinel       
+WORKDIR /$BASE_DIR
 
-WORKDIR /user/local/sentinel
+RUN    mkdir ./app
+RUN    mkdir ./bin
+RUN    mkdir /root/logs
+RUN    mkdir /root/logs/csp
+#RUN mkdir ./bin
+
+COPY docker-entrypoint.sh ./bin/docker-entrypoint.sh
+
+RUN chmod +x ./bin/docker-entrypoint.sh
 
 ADD https://github.com/alibaba/Sentinel/releases/download/${VERSION}/${FILE_NAME}-${VERSION}.jar ./
 
-#app.jar
+RUN \cp -f ./${FILE_NAME}-${VERSION}.jar ./app/app.jar
 
-RUN mkdir /app
-
-RUN \cp -f ./${FILE_NAME}-${VERSION}.jar /app/app.jar
-
-WORKDIR /
-
-ENTRYPOINT ["java","-Dserver.port=8080","-Dcsp.sentinel.dashboard.server=localhost:8080","-Dproject.name=sentinel-dashboard","-jar","/app/app.jar"]
+COPY ./${PROJECT_NAME}.properties /root/logs/csp/${PROJECT_NAME}.properties
 
 EXPOSE 8080
+
+ENTRYPOINT ["bin/docker-entrypoint.sh"]
