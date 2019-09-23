@@ -1,0 +1,2 @@
+http.host: "0.0.0.0"
+xpack.monitoring.elasticsearch.url: ["http://47.97.91.65:9200"]

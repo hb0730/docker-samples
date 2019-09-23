@@ -1,0 +1,12 @@
+version: '3.1'
+services:
+   logstash:
+       image: logstash:6.7.0
+       container_name: logstash
+       volumes:
+           - ./devops/logstash.conf:/usr/share/logstash/pipeline/logstash.conf
+           - ./devops/logstash.yml:/usr/share/logstash/config/logstash.yml
+       ports:
+           - "5044:5044"
+           - "9600:9600"
+           - "9601:9601"
