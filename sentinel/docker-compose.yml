@@ -1,7 +1,7 @@
 version: '3.1'
 services:
    sentinel:
-      image: hb0730/alibaba-sentinel
+      image: sentinel
       restart: always
       container_name: sentinel
       volumes:

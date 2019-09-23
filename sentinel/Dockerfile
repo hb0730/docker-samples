@@ -7,13 +7,18 @@ USER root
 ENV BASE_DIR=home/sentinel \
     FILE_NAME=sentinel-dashboard \
     VERSION=1.6.3 \
-    PROJECT_NAME=sentinel-dashboard
+    PROJECT_NAME=sentinel-dashboard \
+    DASHBOARD_SERVER=localhost:8080 \
+    SERVER_PORT=8080 \
+    USER_NAME=sentinel \
+    PASS_WORD=sentinel \
+    TIME_OUT=7200
 #RUN mkdir /home/sentinel       
 WORKDIR /$BASE_DIR
 
-RUN    mkdir ./app
-RUN    mkdir ./bin
-RUN    mkdir /root/logs
+RUN    mkdir ./app  
+RUN    mkdir ./bin  
+RUN    mkdir /root/logs 
 RUN    mkdir /root/logs/csp
 #RUN mkdir ./bin
 
@@ -25,8 +30,8 @@ ADD https://github.com/alibaba/Sentinel/releases/download/${VERSION}/${FILE_NAME
 
 RUN \cp -f ./${FILE_NAME}-${VERSION}.jar ./app/app.jar
 
-COPY ./${PROJECT_NAME}.properties /root/logs/csp/${PROJECT_NAME}.properties
+#COPY ./${PROJECT_NAME}.properties /root/logs/csp/${PROJECT_NAME}.properties
 
-EXPOSE 8080
+EXPOSE ${SERVER_PORT}
 
 ENTRYPOINT ["bin/docker-entrypoint.sh"]
