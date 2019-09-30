@@ -1,0 +1,22 @@
+version: '3.1'
+services:
+   nacos:
+     image: nacos/nacos-server
+     container_name: nacos
+     environment:
+       - PREFER_HOST_MODE=ip
+       - MODE=standalone
+       - SPRING_DATASOURCE_PLATFORM=mysql
+       - MYSQL_MASTER_SERVICE_HOST=39.104.49.219
+       - MYSQL_MASTER_SERVICE_DB_NAME=nacos_config
+       - MYSQL_MASTER_SERVICE_PORT=3306
+       - MYSQL_MASTER_SERVICE_USER=root
+       - MYSQL_MASTER_SERVICE_PASSWORD=Admin123
+       - MYSQL_SLAVE_SERVICE_HOST=39.104.49.219
+       - MYSQL_SLAVE_SERVICE_PORT=3306
+     volumes:
+       - ./data/log/standalone-logs/:/home/nacos/logs
+       - ./data/init.d/custom.properties:/home/nacos/init.d/custom.properties
+       - ./data/lib:/home/nacos/plugins/mysql  
+     ports:
+       - "8848:8848"
