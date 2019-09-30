@@ -1,3 +1,3 @@
-# elasticsearch 
-nacos docker 直接采用官方推荐
-[nacos-docker](https://github.com/nacos-group/nacos-docker.git)
+# elasticsearch-wutang
+docker-compose image 直接采用[wutang](https://github.com/JaredTan95/skywalking-docker) 构建的镜像
+配合skywalking使用
