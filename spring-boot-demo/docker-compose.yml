@@ -1,10 +1,18 @@
+################################
+# JAVA_OPTS 为jVM参数
+# SPRING_PROFILES_ACTIVE 为spring 环境
+################################
+###采用多环境 采用环境变量进行参数
 version: '3.1'
 services:
   hohofast:
     restart: always
-    image: xxxx
+    image: hohofast
     environment:
-      - SPRING_PROFILES_ACTIVE=dev
+      - SPRING_PROFILES_ACTIVE=test
+      - JAVA_OPTS=-server -Xms512m -Xmx512m -Xmn512m -XX:MaxMetaspaceSize=512m
     volumes:
+    #日志挂载
     ports:
       - 8080:8080
+      - 1099:1099
