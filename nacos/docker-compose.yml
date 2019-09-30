@@ -7,12 +7,12 @@ services:
        - PREFER_HOST_MODE=ip
        - MODE=standalone
        - SPRING_DATASOURCE_PLATFORM=mysql
-       - MYSQL_MASTER_SERVICE_HOST=39.104.49.219
+       - MYSQL_MASTER_SERVICE_HOST=xx.xx.xx.xx
        - MYSQL_MASTER_SERVICE_DB_NAME=nacos_config
        - MYSQL_MASTER_SERVICE_PORT=3306
        - MYSQL_MASTER_SERVICE_USER=root
        - MYSQL_MASTER_SERVICE_PASSWORD=Admin123
-       - MYSQL_SLAVE_SERVICE_HOST=39.104.49.219
+       - MYSQL_SLAVE_SERVICE_HOST=xx.xx.xx.xx
        - MYSQL_SLAVE_SERVICE_PORT=3306
      volumes:
        - ./data/log/standalone-logs/:/home/nacos/logs

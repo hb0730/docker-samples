@@ -6,4 +6,4 @@ services:
         ports:
            - 8600:8080
         environment:
-           collector.ribbon.listOfServers: 47.99.95.19:12800
+           collector.ribbon.listOfServers: xx.xx.xx.xx:12800

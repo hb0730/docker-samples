@@ -8,5 +8,5 @@ services:
           - 12800:12800
        environment:
           - SW_STORAGE=elasticsearch 
-          - SW_STORAGE_ES_CLUSTER_NODES=39.104.49.219:9200
+          - SW_STORAGE_ES_CLUSTER_NODES=xx.xx.xx.xx:9200
           - TZ=Asia/Shanghai
