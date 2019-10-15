@@ -8,7 +8,7 @@
 |VERSION|1.8.4|yapi版本|
 |HOME|/home|安装路径|
 |PORT|3000|端口|
-|ADMIN_EMAIL|me@jinfeijie.cn|管理mail|
+|ADMIN_EMAIL|1278032416@qq.com|管理mail|
 |DB_SERVER|mongo(127.0.0.1)	|MongoDB地址|
 |DB_NAME|yapi|数据库|
 |DB_PORT|27017 |MongoDB端口|
