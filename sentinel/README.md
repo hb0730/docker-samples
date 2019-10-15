@@ -3,5 +3,5 @@
 基于openjdk:8-jre
 使用 https://github.com/alibaba/Sentinel/releases 提供的jar
 # 版本说明
- * `1.0.0` --> alibab sentinel 1.6.2
- * `1.6.2`,`latest` -->alibaba sentinel 1.6.3
+ * `1.6.3`,`latest` -->`alibaba sentinel 1.6.3`
+ * `1.0.0` --> `alibab sentinel 1.6.2`
