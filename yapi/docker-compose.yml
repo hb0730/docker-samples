@@ -1,0 +1,21 @@
+version: '2.1'
+services:
+   yapi:
+      image: yapi
+      container_name: yapi
+      restart: always
+      environment:
+          - VERSION=1.8.4
+          - LOG_PATH=/tmp/yapi.log
+          - HOME=/home
+          - ADMIN_EMAIL=1278032416@qq.com
+          - DB_SERVER=172.17.0.1
+          - DB_NAME=yapi
+          - DB_USER=root
+          - DB_PASS=Admin123
+          - DB_AUTH=admin
+          - DB_PORT=27017
+      ports:
+          - 3000:3000
+      volumes:
+          - ./data/yapi/log/yapi.log:/home/vendors/log
