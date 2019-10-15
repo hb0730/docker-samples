@@ -19,7 +19,7 @@
 # 获取本镜像
 `docker pull hb0730/yapi:targname`
 # 编译本镜像
-`--build-arg VERSION=1.8.4 -t  yapi .`
+`docker --build-arg VERSION=1.8.4 -t  yapi .`
 # 如何启动本镜像
 `docker-compose up -d`
 # hub.docker地址
