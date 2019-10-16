@@ -4,9 +4,10 @@ MAINTAINER bing_huang <1278032416@qq.com>
 
 USER root
 
+AGR VERSION=1.6.3 
+
 ENV BASE_DIR=home/sentinel \
     FILE_NAME=sentinel-dashboard \
-    VERSION=1.6.3 \
     PROJECT_NAME=sentinel-dashboard \
     DASHBOARD_SERVER=localhost:8080 \
     SERVER_PORT=8080 \
