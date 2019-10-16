@@ -1,5 +1,5 @@
 # yapi api管理工具 
-![docker build](https://badgen.net/badge/docker%20build/passing/green)
+![docker build](https://img.shields.io/badge/docker%20build-passing-brightgreen)
 
 # 用户
  默认密码为`ymfe.org`
