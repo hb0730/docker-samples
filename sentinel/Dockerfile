@@ -4,7 +4,7 @@ MAINTAINER bing_huang <1278032416@qq.com>
 
 USER root
 
-AGR VERSION=1.6.3 
+ARG VERSION=1.6.3 
 
 ENV BASE_DIR=home/sentinel \
     FILE_NAME=sentinel-dashboard \
