@@ -4,18 +4,18 @@ MAINTAINER bing_huang<1278032416@qq.com>
 
 ARG VERSION=1.8.3
  
-ENV HOME "/home" 
-ENV PORT 3000 
-ENV ADMIN_EMAIL 1278032416@qq.com 
-ENV DB_SERVER "mongo" 
-ENV DB_NAME "yapi"
-ENV DB_PORT 27017 
-ENV DB_USER root 
-ENV DB_PASS Admin123  
-ENV DB_AUTH admin 
-ENV VENDORS ${HOME}/vendors 
-ENV GIT_URL https://github.com/YMFE/yapi.git 
-ENV GIT_MIRROR_URL https://gitee.com/mirrors/YApi.git 
+ENV HOME "/home" \
+PORT 3000 \
+ADMIN_EMAIL 1278032416@qq.com \
+DB_SERVER "mongo" \ 
+DB_NAME "yapi" \
+DB_PORT 27017 \ 
+DB_USER root  \
+DB_PASS Admin123 \  
+DB_AUTH admin  \
+VENDORS ${HOME}/vendors \
+GIT_URL https://github.com/YMFE/yapi.git \ 
+GIT_MIRROR_URL https://gitee.com/mirrors/YApi.git 
 
 WORKDIR ${HOME}/
 
