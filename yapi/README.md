@@ -1,6 +1,6 @@
 # yapi api管理工具 
 ![docker build](https://img.shields.io/badge/docker%20build-passing-brightgreen)
-
+![docker pulls](https://badgen.net/docker/pulls/hb0730/jenkins)
 # 用户
  默认密码为`ymfe.org`
  # 可修改参数
