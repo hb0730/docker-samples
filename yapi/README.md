@@ -1,5 +1,5 @@
 # yapi api管理工具 
-![Image text](https://raw.githubusercontent.com/hongmaju/light7Local/master/img/productShow/20170518152848.png)
+![docker build](https://badgen.net/badge/docker%20build/passing/green)
 
 # 用户
  默认密码为`ymfe.org`
