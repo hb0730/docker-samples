@@ -33,3 +33,5 @@
 # 版本
  * `1.8.4` `latest` --->`yapi 1.8.4`
  
+# thanks
+* [jinfeijie](https://github.com/jinfeijie/yapi)
