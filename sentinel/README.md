@@ -1,6 +1,6 @@
 # alibaba-Sentinel dashboard
 [![docker build](https://img.shields.io/badge/docker%20build-passing-brightgreen)](https://hub.docker.com/r/hb0730/alibaba-sentinel)
-[![docker pull](/docker/pulls/hb0730/alibaba-sentinel)](https://hub.docker.com/r/hb0730/alibaba-sentinel)
+[![docker pull](https://badgen.net/docker/pulls/hb0730/alibaba-sentinel)](https://hub.docker.com/r/hb0730/alibaba-sentinel)
 [![docker cloud status](https://img.shields.io/badge/docker%20build-automated-066da5)](https://hub.docker.com/r/hb0730/alibaba-sentinel)
 
 采用阿里巴巴 sentinel 控制台 最新版本
