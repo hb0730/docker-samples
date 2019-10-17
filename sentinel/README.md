@@ -8,9 +8,9 @@
 使用 https://github.com/alibaba/Sentinel/releases 提供的jar
 # 如何使用 build
  `build.sh` 有两个子命令 `generate` `build`
- ## `generate`生成Dockerfile`
+ ## `generate`生成Dockerfile
 	`./build.sh generate version` 
- ## `build`用于构建docker image`
+ ## `build`用于构建docker image
 	`./build.sh build image_name file_local`
 # 版本说明
  * `1.6.3`,`latest` -->`alibaba sentinel 1.6.3`
