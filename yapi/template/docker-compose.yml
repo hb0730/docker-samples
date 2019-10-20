@@ -5,7 +5,7 @@ services:
       container_name: yapi
       restart: always
       environment:
-          - VERSION=1.8.5
+          - VERSION=version-v
           - LOG_PATH=/tmp/yapi.log
           - HOME=/home
           - ADMIN_EMAIL=1278032416@qq.com

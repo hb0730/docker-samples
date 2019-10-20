@@ -1,6 +1,7 @@
 #!/bin/bash
 function generate(){
         local file=Dockerfile
+		local composefile=docker-compose.yml
         local tempDir=template
         local version=$1
         if [ -d $version ];then rm -rf $version
@@ -8,8 +9,11 @@ function generate(){
         mkdir $version
         cd $1
         cp ../$tempDir/$file .
+		cp ../$tempDir/$composefile .
         sed -i "s/version-v/"$1"/g"  ./$file
+		sed -i "s/version-v/"$1"/g"  ./$composefile
         cp ./$file ..
+		cp ./$composefile ..
 }
 function build(){
         local image_name=$1
