@@ -24,10 +24,7 @@ COPY config.json ${HOME}
 #COPY wait-for-it.sh /
 
 RUN rm -rf node && \
-   ret = `curl -s  https://api.ip.sb/geoip | grep China | wc -l` && \
-   if [ `curl -s  https://api.ip.sb/geoip | grep China | wc -l` -ne 0]; then \
-    GIT_URL=${GIT_MIRROR_URL} && npm config set registry https://registry.npm.taobao.org; \
-   fi; \
+   GIT_URL=${GIT_MIRROR_URL} && npm config set registry https://registry.npm.taobao.org; \
    echo ${GIT_URL} && \
    git clone ${GIT_URL} vendors && \
    cd vendors && \
