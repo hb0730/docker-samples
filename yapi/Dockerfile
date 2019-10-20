@@ -25,7 +25,7 @@ COPY config.json ${HOME}
 
 RUN rm -rf node && \
    ret = `curl -s  https://api.ip.sb/geoip | grep China | wc -l` && \
-   if [ $ret -ne 0]; then \
+   if [ ${ret} -ne 0]; then \
     GIT_URL=${GIT_MIRROR_URL} && npm config set registry https://registry.npm.taobao.org; \
    fi; \
    echo ${GIT_URL} && \
