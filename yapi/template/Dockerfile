@@ -25,8 +25,8 @@ COPY config.json ${HOME}
 #COPY wait-for-it.sh /
 
 RUN rm -rf node && \
-   ret = `curl -s  https://api.ip.sb/geoip | grep China | wc -l` && \
-   if [ ${ret} -ne 0]; then \
+   RET = `curl -s  https://api.ip.sb/geoip | grep China | wc -l` && \
+   if [ ${RET} -ne 0]; then \
     GIT_URL=${GIT_URL} && npm config set registry https://registry.npm.taobao.org; \
    fi; \
    echo ${GIT_URL} && \
