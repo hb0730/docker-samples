@@ -23,7 +23,7 @@ WORKDIR ${HOME}/
 COPY docker-entrypoint.sh /bin
 COPY config.json ${HOME}
 #COPY wait-for-it.sh /
-
+RUN apt-get install -y  git python make openssl tar gcc
 RUN rm -rf node && \
    echo ${GIT_URL} && \
    git clone ${GIT_URL} vendors && \
