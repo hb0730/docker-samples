@@ -2,7 +2,7 @@ FROM node:11
 
 MAINTAINER bing_huang<1278032416@qq.com>
 
-ARG VERSION=version-v
+ARG VERSION=1.8.5
  
 ENV HOME "/home" \
 PORT 3000 \
@@ -14,27 +14,24 @@ DB_USER root  \
 DB_PASS Admin123 \  
 DB_AUTH admin  \
 VENDORS ${HOME}/vendors \
-GIT_URL https://github.com/YMFE/yapi.git \ 
-GIT_MIRROR_URL https://gitee.com/mirrors/YApi.git \
+GIT_USER YMFE \
+REPO yapi  \
 RET=0
 
 WORKDIR ${HOME}/
 
 COPY docker-entrypoint.sh /bin
 COPY config.json ${HOME}
-#COPY wait-for-it.sh /
-RUN apt-get install -y  git python make openssl tar gcc
-RUN git clone ${GIT_URL} vendors 
+
 RUN rm -rf node && \
-   echo ${GIT_URL} && \
-   ls &&
-   cd vendors && \
-   git fetch origin  v${VERSION}:v${VERSION} && \
-   git checkout v${VERSION} && \
-   npm install -g node-gyp yapi-cli && \
-   npm install --production && \
-   chmod +x /bin/docker-entrypoint.sh
-        
+wget https://github.com/YMFE/yapi/archive/v${VERSION}.tar.gz && \
+tar -zxvf v${VERSION}.tar.gz && \
+mv yapi-${VERSION} vendors && \
+cd vendors && \
+npm install -g node-gyp yapi-cli && \
+npm install --production && \
+chmod +x /bin/docker-entrypoint.sh
+
 EXPOSE ${PORT}
 
 ENTRYPOINT ["/bin/docker-entrypoint.sh"]
