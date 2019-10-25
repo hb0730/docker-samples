@@ -4,9 +4,9 @@ MAINTAINER bing_huang <1278032416@qq.com>
 
 USER root
 
-ENV MAVEN_VERSION=3.6.1 \
-NODE_VERSION=v10.16.3 \
-JDK_VERSION=8
+ENV MAVEN_VERSION=3.6.1 
+ENV NODE_VERSION=v10.16.3 
+ENV JDK_VERSION=8
 
 ##快速 sh脚本
 RUN curl -fsSL get.docker.com -o get-docker.sh
