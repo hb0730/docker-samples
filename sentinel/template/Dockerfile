@@ -6,14 +6,14 @@ USER root
 
 ARG VERSION=VERSION-V
 
-ENV BASE_DIR=home/sentinel \
-    FILE_NAME=sentinel-dashboard \
-    PROJECT_NAME=sentinel-dashboard \
-    DASHBOARD_SERVER=localhost:8080 \
-    SERVER_PORT=8080 \
-    USER_NAME=sentinel \
-    PASS_WORD=sentinel \
-    TIME_OUT=7200
+ENV BASE_DIR "home/sentinel" 
+ENV FILE_NAME "sentinel-dashboard" 
+ENV PROJECT_NAME "sentinel-dashboard" 
+ENV DASHBOARD_SERVER localhost:8080 
+ENV SERVER_PORT 8080 
+ENV USER_NAME "sentinel"
+ENV PASS_WORD "sentinel" 
+ENV TIME_OUT 7200
 #RUN mkdir /home/sentinel       
 WORKDIR /$BASE_DIR
 
