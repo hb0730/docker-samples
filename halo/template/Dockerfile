@@ -2,15 +2,15 @@ FROM openjdk:8-jre
 
 MAINTAINER bing_huang <1278032416@qq.com>
 
-ENV GIT_URL=https://github.com/halo-dev/halo/releases/download \
-BASE_DIR=/home/halo \
-SERVER_PORT=8090 \
-TIME_ZONE=Asia/Shanghai \
-JVM_XMS=256m \
-JVM_XMX=256m \
-JVM_XMN=256m \
-JVM_MS=128m \
-JVM_MMS=320m 
+ENV GIT_URL=https://github.com/halo-dev/halo/releases/download 
+ENV BASE_DIR=/home/halo 
+ENV SERVER_PORT=8090 
+ENV TIME_ZONE=Asia/Shanghai 
+ENV JVM_XMS=256m 
+ENV JVM_XMX=256m 
+ENV JVM_XMN=256m 
+ENV JVM_MS=128m 
+ENV JVM_MMS=320m 
 
 ARG HALO_VERSION=version-v
 

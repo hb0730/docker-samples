@@ -7,8 +7,8 @@ services:
         - 8800:8090
       environment:
         - VIRTUAL_PORT=8090
-        - VIRTUAL_HOST=blog.hb0730.cn
-        - LETSENCRYPT_HOST=blog.hb0730.cn
+        - VIRTUAL_HOST=blog.hb0730.com
+        - LETSENCRYPT_HOST=blog.hb0730.com
         - LETSENCRYPT_EMAIL=1278032416@qq.com
         - MAX_UPLOAD_SIZE=10m
         - JVM_XMS=256m
