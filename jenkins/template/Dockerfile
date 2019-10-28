@@ -1,4 +1,4 @@
-FROM jenkins/jenkins:2.202
+FROM jenkins/jenkins:VERSION-V
 
 MAINTAINER bing_huang <1278032416@qq.com>
 
