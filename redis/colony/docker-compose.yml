@@ -1,0 +1,21 @@
+version: '3.1'
+services:
+  master:
+    image: redis
+    container_name: redis-master
+    ports:
+      - 6379:6379
+
+  slave1:
+    image: redis
+    container_name: redis-slave-1
+    ports:
+      - 6380:6379
+    command: redis-server --slaveof redis-master 6379
+
+  slave2:
+    image: redis
+    container_name: redis-slave-2
+    ports:
+      - 6381:6379
+    command: redis-server --slaveof redis-master 6379
