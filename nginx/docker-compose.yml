@@ -1,0 +1,20 @@
+version: '3.1'
+services:
+   nginx:
+     image: nginx:1.17-alpine
+     restart: always
+     container_name: nginx
+     ports:
+       - 80:80
+       - 443:443
+       - 8080:8080
+     volumes:
+       - ./mnt:/usr/share/nginx/html
+       - ./conf/conf.d:/etc/nginx/conf.d
+       - ./conf/nginx.conf:/etc/nginx/nginx.conf
+       - ./log:/var/log/nginx
+       - ./cert:/cert  
+       - ./www:/var/www
+       - /etc/letsencrypt:/etc/letsencrypt
+     environment:
+       - TZ=Asia/Shanghai
