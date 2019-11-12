@@ -6,6 +6,6 @@ services:
       container_name: sentinel
       volumes:
         - ./logs:/root/logs
-        - ./config:/home/sentinel/app
+        - ./config:/home/sentinel/config
       ports:
         - '8408:8080'
