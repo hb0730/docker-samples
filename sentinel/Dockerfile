@@ -6,15 +6,18 @@ USER root
 
 ARG VERSION=1.7.0
 
-ENV BASE_DIR home/sentinel
-ENV PROJECT_NAME sentinel-dashboard 
+ENV BASE_DIR "home/sentinel" 
+ENV FILE_NAME "sentinel-dashboard" 
+ENV PROJECT_NAME "sentinel-dashboard" 
+ENV DASHBOARD_SERVER localhost:8080 
 ENV SERVER_PORT 8080 
-ENV DASHBOARD_SERVER localhost:8080
-
+     
 WORKDIR /$BASE_DIR
 
 RUN    mkdir app  
-RUN    mkdir bin 
+RUN    mkdir bin  
+RUN    mkdir /root/logs 
+RUN    mkdir /root/logs/csp
 
 COPY docker-entrypoint.sh ./bin/docker-entrypoint.sh
 
