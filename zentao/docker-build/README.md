@@ -7,3 +7,9 @@
 <https://hub.docker.com/r/idoop/zentao>
 # hb0730 zentao 地址
 <https://hub.docker.com/r/hb0730/zentao>
+
+# version
+ + `hb0730/11.6.5` `latest` --> `zentao 11.6.5`
+ + `hb0730/11.6.4` --> `zentao 11.6.4`
+ + `hb0730/11.6.3` --> `zentao 11.6.3`
+ + `hb0730/11.6.2` --> `zentao 11.6.2` 
