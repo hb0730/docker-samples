@@ -1,0 +1,22 @@
+version: "3.1"
+services:
+  gitlab:
+    image: 'gitlab/gitlab-ce'
+    restart: always
+    hostname: '服务器域名或ip 192.168.6.128'
+    environment:
+      TZ: "Asia/Shanghai"
+      GITLAB_OMNIBUS_CONFIG: |
+              external_url '服务器域名/ http://gitlab.xex.cc'
+              gitlab_rails['gitlab_shell_ssh_port'] = ssh端口 2222
+              gitlab_rails['time_zone'] = 'Asia/Shanghai'
+              unicorn['port'] = 端口 8888
+
+    ports:
+      - '32775:80'
+      - '8443:443'  
+      - '2222:22'
+    volumes:
+      - ./config:/etc/gitlab
+      - ./data:/var/opt/gitlab
+      - ./logs:/var/log/gitlab
