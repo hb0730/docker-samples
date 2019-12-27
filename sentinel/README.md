@@ -13,8 +13,9 @@
  ## `build`用于构建docker image
 	` ./build.sh build image_name file_local `
 # 版本说明
- * `1.7.0`,`latest`-->`alibaba sentinel 1.7.0`
+ * ·1.7.1·,`latest` --> `alibaba sentinel 1.7.0`
+ * `1.7.0` --> `alibaba sentinel 1.7.0`
    + application.properties url `/home/sentinel/app/application.properties`
    + remove surplus ENV
- * `1.6.3`,`latest` -->`alibaba sentinel 1.6.3`
+ * `1.6.3`,`latest` --> `alibaba sentinel 1.6.3`
  * `1.0.0` --> `alibab sentinel 1.6.2`
