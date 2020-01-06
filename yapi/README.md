@@ -2,9 +2,11 @@
 [![docker build](https://img.shields.io/badge/docker%20build-passing-brightgreen)](https://hub.docker.com/r/hb0730/yapi)
 [![docker pulls](https://badgen.net/docker/pulls/hb0730/yapi)](https://hub.docker.com/r/hb0730/yapi)
 [![docker cloud build](https://img.shields.io/badge/docker%20build-automated-066da5)](https://hub.docker.com/r/hb0730/yapi)
+
 # 用户
  默认密码为`ymfe.org`
- # 可修改参数
+
+# 可修改参数
  |环境变量|默认值|说明|
 |----|----|---|
 |VERSION|1.8.4|yapi版本|
@@ -20,10 +22,13 @@
 
 # 获取本镜像
 `docker pull hb0730/yapi:targname`
+
 # 编译本镜像
 `docker --build-arg VERSION=1.8.4 -t  yapi .`
+
 # 如何启动本镜像
 `docker-compose up -d`
+
 # hub.docker地址
 <https://hub.docker.com/r/hb0730/yapi>
 
@@ -33,5 +38,6 @@
 # 版本
  * `1.8.5` `latest` --> `yapi 1.8.5`
  * `1.8.4`  ---> `yapi 1.8.4`
+
 # thanks
  * [jinfeijie](https://github.com/jinfeijie/yapi)

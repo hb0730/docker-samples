@@ -1,7 +1,9 @@
 # halo
 Halo是一种现代化的个人独立博客系统，给习惯写博客的同学多一个选择。
+
 # `hb0730/halo`特性
 `hb0730/halo` 只为动态支持数据h2与mysql的切换
+
 # 环境变量说明
 |环境变量|默认值|说明|
 |----|----|---|
@@ -12,11 +14,13 @@ Halo是一种现代化的个人独立博客系统，给习惯写博客的同学�
 |MAX_UPLOAD_SIZE|10m||
 |JVM_XMS|256m||
 |JVM_XMX|256m||
+
 # volumes挂载说明
 **注意,`hb730/halo`不同之处**
 * `/home/halo/logs` halo日志
 * `/home/halo/conf`为 application.properties **如果不需要挂载：启动则使默认用h2,这里就可以做到h2与mysql的切换**
 * `/home/halo/plugins/mysql ` 为mysql 驱动包挂载处，用于兼容不同mysql版本
+
 # application.properties 案例
 ```
 server.port=8090
@@ -45,12 +49,16 @@ spring.mvc.favicon.enabled=false
 logging.level.run.halo.app=INFO
 logging.path=${user.home}/.halo/logs
 ```
+
 # 版本
 * `latest` `1.2.0` -> `halo 1.2.0`
 * `1.1.1` -> `halo 1.1.1`
+
 # docker 地址
 <https://hub.docker.com/r/hb0730/halo>
+
 # 源码
 <https://github.com/halo-dev/halo>
+
 # thanks
  [halo](https://github.com/halo-dev/halo)
