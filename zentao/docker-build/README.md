@@ -9,7 +9,8 @@
 <https://hub.docker.com/r/hb0730/zentao>
 
 # version
- + `hb0730/11.7` `latest` --> `zentao 11.7`
+ + `hb0730/12.0` `latest` --> `zentao 12.0`
+ + `hb0730/11.7` --> `zentao 11.7`
  + `hb0730/11.6.5` --> `zentao 11.6.5`
  + `hb0730/11.6.4` --> `zentao 11.6.4`
  + `hb0730/11.6.3` --> `zentao 11.6.3`
