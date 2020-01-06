@@ -46,7 +46,8 @@ logging.level.run.halo.app=INFO
 logging.path=${user.home}/.halo/logs
 ```
 # 版本
-* `latest` `1.1.1` -> `halo 1.1.1`
+* `latest` `1.2.0` -> `halo 1.2.0`
+* `1.1.1` -> `halo 1.1.1`
 # docker 地址
 <https://hub.docker.com/r/hb0730/halo>
 # 源码
