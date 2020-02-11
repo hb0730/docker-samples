@@ -2,7 +2,7 @@ FROM node:11
 
 MAINTAINER bing_huang<1278032416@qq.com>
 
-ARG VERSION=1.8.5
+ARG VERSION=version-v
  
 ENV HOME "/home" 
 ENV PORT 3000 
