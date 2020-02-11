@@ -36,8 +36,9 @@
 <https://github.com/YMFE/yapi>
 
 # 版本
- * `1.8.5` `latest` --> `yapi 1.8.5`
- * `1.8.4`  ---> `yapi 1.8.4`
+ * `1.8.7` `latest` --> `yapi 1.8.7`
+ * `1.8.5`  --> `yapi 1.8.5`
+ * `1.8.4`  --> `yapi 1.8.4`
 
 # thanks
  * [jinfeijie](https://github.com/jinfeijie/yapi)
