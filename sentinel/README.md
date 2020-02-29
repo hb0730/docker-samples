@@ -57,7 +57,7 @@ auth.password=sentinel
 	`./build.sh build image_name file_local`
 
 # 版本说明
- * `hb0730/alibaba-sentinel:1.7.1`,`hb0730/alibaba-sentinel:latest` --> `alibaba sentinel 1.7.0`
+ * `hb0730/alibaba-sentinel:1.7.1`,`hb0730/alibaba-sentinel:latest` --> `alibaba sentinel 1.7.1`
  * `hb0730/alibaba-sentinel:1.7.0` --> `alibaba sentinel 1.7.0`
    + application.properties url `/home/sentinel/app/application.properties`
    + remove surplus ENV
