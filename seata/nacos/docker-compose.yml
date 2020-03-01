@@ -1,0 +1,14 @@
+version: "3"
+services:
+  seata-server:
+    image: seata-server:1.0.0
+    hostname: seata-server
+    container_name: seata-server
+    ports:
+      - "8091:8091"
+    environment:
+      - SEATA_PORT=8091
+      - SEATA_IP=外网ip(客户端连接ip)
+      - SEATA_CONFIG_NAME=file:/root/seata-config/registry
+    volumes:
+      - ./config:/root/seata-config

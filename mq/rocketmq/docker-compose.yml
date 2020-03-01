@@ -1,33 +1,33 @@
-version: "3.5"
+version: '3.5'
+
 services:
   rmqnamesrv:
-    image: foxiswho/rocketmq:server
+    image: foxiswho/rocketmq:server-4.4.0
     container_name: rmqnamesrv
     ports:
       - 9876:9876
     volumes:
-      - ./data/logs:/opt/logs
-      - ./data/store:/opt/store
+      - ./rmqs/logs:/opt/logs
+      - ./rmqs/store:/opt/store
+    environment:
+      JAVA_OPT_EXT: "-Duser.home=/opt -Xms512m -Xms512m -Xmn128m"
     networks:
         rmq:
           aliases:
             - rmqnamesrv
-
   rmqbroker:
-    image: foxiswho/rocketmq:broker
+    image: foxiswho/rocketmq:broker-4.4.0
     container_name: rmqbroker
     ports:
       - 10909:10909
       - 10911:10911
     volumes:
-      - ./data/logs:/opt/logs
-      - ./data/store:/opt/store
-      - ./data/brokerconf/broker.conf:/etc/rocketmq/broker.conf
+      - ./rmq/logs:/opt/logs
+      - ./rmq/store:/opt/store
+      - ./rmq/brokerconf/broker.conf:/etc/rocketmq/broker.conf
     environment:
-        NAMESRV_ADDR: "rmqnamesrv:9876"
-        JAVA_OPTS: " -Duser.home=/opt"
-        JAVA_OPT_EXT: "-server -Xms128m -Xmx128m -Xmn128m"
-    command: mqbroker -c /etc/rocketmq/broker.conf
+        JAVA_OPT_EXT: "-Duser.home=/opt -server -Xms512m -Xms512m -Xmn128m"
+    command: ["sh","mqbroker","-c","/etc/rocketmq/broker.conf","-n","rmqnamesrv:9876","autoCreateTopicEnable=true"]
     depends_on:
       - rmqnamesrv
     networks:
@@ -39,7 +39,7 @@ services:
     image: styletang/rocketmq-console-ng
     container_name: rmqconsole
     ports:
-      - 8080:8080
+      - 8180:8080
     environment:
         JAVA_OPTS: "-Drocketmq.namesrv.addr=rmqnamesrv:9876 -Dcom.rocketmq.sendMessageWithVIPChannel=false"
     depends_on:
