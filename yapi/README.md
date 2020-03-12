@@ -1,7 +1,8 @@
 # yapi api管理工具 
-[![docker build](https://img.shields.io/badge/docker%20build-passing-brightgreen)](https://hub.docker.com/r/hb0730/yapi)
-[![docker pulls](https://badgen.net/docker/pulls/hb0730/yapi)](https://hub.docker.com/r/hb0730/yapi)
-[![docker cloud build](https://img.shields.io/badge/docker%20build-automated-066da5)](https://hub.docker.com/r/hb0730/yapi)
+[^_^]:
+    [![docker build](https://img.shields.io/badge/docker%20build-passing-brightgreen)](https://hub.docker.com/r/hb0730/yapi)
+    [![docker pulls](https://badgen.net/docker/pulls/hb0730/yapi)](https://hub.docker.com/r/hb0730/yapi)
+    [![docker cloud build](https://img.shields.io/badge/docker%20build-automated-066da5)](https://hub.docker.com/r/hb0730/yapi)
 
 # 用户
  默认密码为`ymfe.org`
@@ -36,7 +37,8 @@
 <https://github.com/YMFE/yapi>
 
 # 版本
- * `hb0730/yapi:1.8.8` `hb0730/yapi:latest` --> `yapi 1.8.8`
+ * `hb0730/yapi:1.8.9` `hb0730/yapi:latest` --> `yapi 1.8.9`
+ * `hb0730/yapi:1.8.8`  --> `yapi 1.8.8`
  * `hb0730/yapi:1.8.7`  --> `yapi 1.8.7`
  * `hb0730/yapi:1.8.5`  --> `yapi 1.8.5`
  * `hb0730/yapi:1.8.4`  --> `yapi 1.8.4`
