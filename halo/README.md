@@ -51,7 +51,8 @@ logging.path=${user.home}/.halo/logs
 ```
 
 # 版本
-* `hb0730/halo:1.3.0` `hb0730/halo:latest` -> `halo 1.3.0`
+* `hb0730/halo:1.3.1` `hb0730/halo:latest` -> `halo 1.3.1`
+* `hb0730/halo:1.3.0`  -> `halo 1.3.0`
 * `hb0730/halo:1.2.0`  -> `halo 1.2.0`
 * `hb0730/halo:1.1.1` -> `halo 1.1.1`
 
