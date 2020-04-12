@@ -1,8 +1,4 @@
 # alibaba-Sentinel dashboard
-[![docker build](https://img.shields.io/badge/docker%20build-passing-brightgreen)](https://hub.docker.com/r/hb0730/alibaba-sentinel)
-[![docker pull](https://badgen.net/docker/pulls/hb0730/alibaba-sentinel)](https://hub.docker.com/r/hb0730/alibaba-sentinel)
-[![docker cloud status](https://img.shields.io/badge/docker%20build-automated-066da5)](https://hub.docker.com/r/hb0730/alibaba-sentinel)
-
 采用阿里巴巴 sentinel 控制台 最新版本
 基于openjdk:8-jre
 使用 https://github.com/alibaba/Sentinel/releases 提供的jar
@@ -57,7 +53,8 @@ auth.password=sentinel
 	`./build.sh build image_name file_local`
 
 # 版本说明
- * `hb0730/alibaba-sentinel:1.7.1`,`hb0730/alibaba-sentinel:latest` --> `alibaba sentinel 1.7.1`
+ * `hb0730/alibaba-sentinel:1.7.2`,`hb0730/alibaba-sentinel:latest` --> `alibaba sentinel 1.7.2`
+ * `hb0730/alibaba-sentinel:1.7.1` --> `alibaba sentinel 1.7.1`
  * `hb0730/alibaba-sentinel:1.7.0` --> `alibaba sentinel 1.7.0`
    + application.properties url `/home/sentinel/app/application.properties`
    + remove surplus ENV
