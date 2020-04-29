@@ -35,7 +35,8 @@
 <https://github.com/YMFE/yapi>
 
 # 版本
-* `hb0730/yapi:1.9.0` `hb0730/yapi:latest` --> `yapi 1.9.0`
+* `hb0730/yapi:1.9.1` `hb0730/yapi:latest` --> `yapi 1.9.1`
+ * `hb0730/yapi:1.9.0`  --> `yapi 1.9.0`
  * `hb0730/yapi:1.8.9`  --> `yapi 1.8.9`
  * `hb0730/yapi:1.8.8`  --> `yapi 1.8.8`
  * `hb0730/yapi:1.8.7`  --> `yapi 1.8.7`
