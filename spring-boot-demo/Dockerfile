@@ -20,6 +20,6 @@ ADD docker-entrypoint.sh bin/docker-entrypoint.sh
 
 RUN chmod +x bin/docker-entrypoint.sh
 
-EXPOSE 8088
+EXPOSE 8080
 
 ENTRYPOINT ["bin/docker-entrypoint.sh"]
