@@ -1,7 +1,7 @@
 version: "2.2"
 services: 
   zentao:
-    image: idoop/zentao:12.3
+    image: idoop/zentao:12.3.1
     container_name: zentao
     # if web response code: 310 ERR_TOO_MANY_REDIRECTS, please use host mode.
 #    network_mode: "host"
