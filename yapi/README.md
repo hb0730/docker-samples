@@ -2,11 +2,12 @@
 <!--[![docker build](https://img.shields.io/badge/docker%20build-passing-brightgreen)](https://hub.docker.com/r/hb0730/yapi)-->
 <!--[![docker pulls](https://badgen.net/docker/pulls/hb0730/yapi)](https://hub.docker.com/r/hb0730/yapi)-->
 <!--[![docker cloud build](https://img.shields.io/badge/docker%20build-automated-066da5)](https://hub.docker.com/r/hb0730/yapi)-->
+
 # 用户
  默认密码为`ymfe.org`
 
 # 可修改参数
- |环境变量|默认值|说明|
+|环境变量|默认值|说明|
 |----|----|---|
 |VERSION|1.8.4|yapi版本|
 |HOME|/home|安装路径|
@@ -35,7 +36,8 @@
 <https://github.com/YMFE/yapi>
 
 # 版本
- * `hb0730/yapi:1.9.1` `hb0730/yapi:latest` --> `yapi 1.9.1`
+ * `hb0730/yapi:1.9.2 ` `hb0730/yapi:latest` --> `yapi 1.9.2`
+ * `hb0730/yapi:1.9.1`  --> `yapi 1.9.1`
  * `hb0730/yapi:1.9.0`  --> `yapi 1.9.0`
  * `hb0730/yapi:1.8.9`  --> `yapi 1.8.9`
  * `hb0730/yapi:1.8.8`  --> `yapi 1.8.8`
