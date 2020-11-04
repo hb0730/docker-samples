@@ -27,7 +27,7 @@ COPY docker-entrypoint.sh ./bin/docker-entrypoint.sh
 
 RUN chmod +x ./bin/docker-entrypoint.sh
 
-ADD https://github.com/alibaba/Sentinel/releases/download/${VERSION}/${FILE_NAME}-${VERSION}.jar ./
+ADD https://github.com/alibaba/Sentinel/releases/download/v${VERSION}/${FILE_NAME}-${VERSION}.jar ./
 
 RUN \cp -f ./${FILE_NAME}-${VERSION}.jar ./app/app.jar
 
