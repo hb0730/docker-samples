@@ -8,4 +8,5 @@ services:
         - ./logs:/root/logs
         - ./config:/home/sentinel/config
       ports:
-        - '8408:8080'
+        - '8080:8080'
+        - '8719:8719'
