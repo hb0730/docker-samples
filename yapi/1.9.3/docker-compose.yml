@@ -4,7 +4,7 @@ services:
       image: yapi
       container_name: yapi
       restart: always
-      ports:
-          - 3000:3000
       volumes:
           - ./config.json:/home/yapi/config.json
+      ports:
+          - 3000:3000
