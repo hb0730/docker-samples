@@ -16,6 +16,45 @@
 # 如何启动本镜像
 `docker-compose up -d`
 
+# docker-compose
+
+```dockerfile
+version: '2.1'
+services:
+  yapi:
+    image: hb0730/yapi:1.9.3
+    container_name: yapi
+    restart: always
+    ports:
+      - 3000:3000
+    volumes:
+      - ./config.json:/home/yapi/config.json
+    networks:
+      - yapi-net
+```
+
+## config.json
+
+```json
+{
+ "port": "3000",
+ "adminAccount": "",
+ "closeRegister": true,
+ "versionNotify": true,
+ "db": {
+   "servername": "",
+   "DATABASE": "",
+   "port": 27017,
+   "user": "",
+   "pass": "",
+   "authSource": ""
+  }
+}
+
+```
+
+
+
 # hub.docker地址
 <https://hub.docker.com/r/hb0730/yapi>
 
